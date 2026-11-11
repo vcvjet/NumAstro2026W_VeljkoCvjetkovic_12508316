@@ -1,0 +1,131 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "id": "70d7ce73-8338-4785-bb09-8e597d5cad83",
+   "metadata": {},
+   "source": [
+    "---\n",
+    "---\n",
+    "\n",
+    "<h1><center><ins>Numerical Methods: Exam 1</ins></center></h1>\n",
+    "<h2><center>November 11, 09:45-11:15 </center></h2>\n",
+    "\n",
+    "Please answer the short questions related to the numerical methods we discussed during the lectures. Provide short and concise (one-two sentences) answers.\n",
+    "\n",
+    "Solve the two exercises in the python notebook, *documenting your code* where needed, or create .py files that are documented.\n",
+    "\n",
+    "Remember to answer any discussion points asked in the question to obtain maximum points.  \n",
+    "\n",
+    "***Before 11:20*** your files need to be uploaded to GitHub.<br>\n",
+    "<br>\n",
+    "This means you have roughly 90 minutes to complete the exercises and answer the questions.\n",
+    "\n",
+    "You may use the lecture notes and any of your exercises freely, but you can **not** use ChatGPT code assistant or other AI coding tools such as Claude.<br> \n",
+    "**_Collaboration or plagarized code except your own is prohibited and no phones or communication will be allowed_**.\n",
+    "\n",
+    "---\n",
+    "---"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "08a86233-7694-4118-aaf5-72a59a09e6ab",
+   "metadata": {},
+   "source": [
+    "## Short questions\n",
+    "1. Name the root-finding methods we have discussed during the lectures, and rank them by their precision. Do all methods always converge? (**2 points**)\n",
+    "2. What is the difference between the trapezoid rule and the Simpson's rule in the Newton-Cotes numerical integration? (**2 points**)\n",
+    "3. What is the simplest way of expanding 1D interpolation methods to 2D? (**2 points**) \n",
+    "4. What is LU decomposition and why is it used when solving sets of linear algebraic equations? (**2 points**)\n",
+    "5. What is the Jacobian matrix in the Newton-Raphson Method for nonlinear systems of equations? Can the Newton-Raphson method always find a solution for a nonlinear system of equations? (**2 points**)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "34a49ef6",
+   "metadata": {},
+   "source": [
+    "## Exercise 1. Interpolating the luminosity profile of a galaxy (10 Points)\n",
+    "\n",
+    "Imagine an elliptical galaxy with the light intensity profile described by the de Vaucouleurs's law. We have observed four datapoints for the intensity in units of $L_\\odot/pc^2$ at the corresponding radii in pc:\n",
+    "\n",
+    "\\begin{aligned}\n",
+    "(R_0,I_0) &= (0,\\;2.14\\times10^5),\\\\\n",
+    "(R_1,I_1) &= (1000,\\;1.14\\times10^3),\\\\\n",
+    "(R_2,I_2) &= (1500,\\;5.51\\times10^2),\\\\\n",
+    "(R_3,I_3) &= (2000,\\;3.36\\times10^2).\n",
+    "\\end{aligned}\n",
+    "\n",
+    "\n",
+    "Use the Lagrange polynomial interpolation to fit a polynomial to these datapoints.\n",
+    "\n",
+    "**(a)** What is the highest polynomial degree that you can fit to the four datapoints? (**1 point**)\n",
+    "\n",
+    "**(b)** Interpolate the datapoints using your polynomial (**5 points** if you use your own Lagrange polynomial, **1 point** if you use embedded python fucntions).\n",
+    "\n",
+    "**(c)** Use embedded functions for numerical integration such as **quad** or **simpson** to integrate your Lagrange polynomial that represents your luminosity profile from zero to 2000 pc to obtain the approximate luminosity of the galaxy in $L_\\odot$. Use the print command to show the result (**2 points**)\n",
+    "\n",
+    "**(d)** Plot your results: the four datapoints and the polynomial that you used to interpolate the function (**2 points**)\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "0e8e3e19-01ac-4a19-b9d9-f6a4675b145c",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "markdown",
+   "id": "671a0f95-e9cb-48ba-9c0e-fbed6bb08f11",
+   "metadata": {
+    "tags": []
+   },
+   "source": [
+    "## Exercise 2. Decelerating satellite and numerical derivation (10 Points)\n",
+    "\n",
+    "A small spacecraft is decelerating. It's time-dependent coordinate is given by the following equation (the time is in seconds and the distance is in meters):\n",
+    "\n",
+    "$$x(t) = 100 - 50 \\exp (-0.2t)$$\n",
+    "\n",
+    "**(a)** Determine the spacecraft's speed at $t=5$ s using the forward and central finite-difference methods (the non-symmetrical and symmetrical methods of calculating the numerical derivative) for the $dt = 1$ s (**2 points**)\n",
+    "\n",
+    "**(b)** Investigate the accuracy of both methods for different step sizes. Create an array of step sizes ranging from 0.1 s to 2 s and calculate the derivatives for each $dt$ (**2 points**). Compare to the precise analytical formula for speed at $t=5$ s (**2 points**)\n",
+    "\n",
+    "**(c)** Plot your results from **(b)** (**2 points**)\n",
+    "\n",
+    "**(d)** Which method is more accurate, the central method or the forward method? (**1 point**). Why is one method more accurate than the other from the mathematical point of view (one sentence explanation is enough; **1 point**)\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "4b4663d4",
+   "metadata": {},
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.8.10"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
